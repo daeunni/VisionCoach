@@ -2,7 +2,7 @@
 
 # VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting
 
-<img src="img/visioncoach_logo.png" width="200"/>
+<img src="img/visioncoach_logo.png" width="280"/>
 
 [![arXiv](https://img.shields.io/badge/arXiv-VisionCoach-red?logo=arxiv)](https://arxiv.org/abs/2512.01707)
 [![Website](https://img.shields.io/badge/🌎_Website-VisionCoach-blue.svg)](https://visioncoach.github.io/)
@@ -30,6 +30,15 @@
 ## 📄 Abstract
 
 Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisionCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisionCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box IoU. Extensive experiments demonstrate that VisionCoach achieves state-of-the-art performance across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools.
+
+---
+## 🔧 Environment Setup
+
+Run the following script to set up the environment:
+
+```bash
+bash ./setup.sh
+```
 
 ---
 
