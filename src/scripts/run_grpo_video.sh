@@ -8,8 +8,8 @@ cd src/r1-v
 export VIDEO_PIXELS_FACTOR=128
 
 MODEL_PATH="./results_train/sft_train_all/checkpoint-7500"
-EXP_NAME="0226_grpo_idl_sft_train_all_alpha_0.1_can_ans_and_grounding_pos_ans_acc_VPSelector"
-OUT_DIR="./results_rl_idl/${EXP_NAME}"
+EXP_NAME="visioncoach"
+OUT_DIR="./results_rl/${EXP_NAME}"
 
 spatial_iou_mode="avg"
 identity_match_mode="soft"       # "none", "soft", "strict"
@@ -24,15 +24,13 @@ wo_vp_selector="false"
 idl_candidate_mode="ans_and_grounding"
 idl_positive_ranking="ans_acc" 
 
-VP_PREDICTIONS_CACHE="./0226_vp_predictions_cache.json"
+VP_PREDICTIONS_CACHE="./vp_predictions_cache.json"
 VP_KEYFRAME_BASE_DIR="./results/open_o3_video_vp"
 DARKEN_KEYFRAME_DIR="./results/open_o3_video_vp/darken"
 NUMPRO_KEYFRAME_DIR="./results/open_o3_video_vp/numpro/keyframes"
 
 KEY_OBJECT_JSON_PATH="./results/open_o3_video_vp/key_obj/STGR-SFT-filtered_key_obj_extracted.json"
-IDL_STGR_FILTER_JSON="./data/json_data/STGR-RL-filtered.json"
-
-IDL_TRAINER_MODULE="trainer.grpo_trainer_idl_v3_nofallback_grounding"
+IDL_STGR_FILTER_JSON="./data/json_data/STGR-RL.json"
 
 #----------------------------------------------------------
 # Environment Setup
@@ -125,5 +123,4 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --nproc_per_node="8" \
     --darken_keyframe_dir $DARKEN_KEYFRAME_DIR \
     --vp_keyframe_base_dir $VP_KEYFRAME_BASE_DIR \
     --key_object_json_path $KEY_OBJECT_JSON_PATH \
-    ${IDL_STGR_FILTER_JSON:+--idl_stgr_filter_json $IDL_STGR_FILTER_JSON} \
-    ${IDL_TRAINER_MODULE:+--idl_trainer_module $IDL_TRAINER_MODULE}
+    ${IDL_STGR_FILTER_JSON:+--idl_stgr_filter_json $IDL_STGR_FILTER_JSON} 
