@@ -4,7 +4,7 @@
 
 <img src="img/visioncoach_logo.png" width="280"/>
 
-[![arXiv](https://img.shields.io/badge/arXiv-VisionCoach-red?logo=arxiv)](https://arxiv.org/abs/2512.01707)
+[![arXiv](https://img.shields.io/badge/arXiv-VisionCoach-red?logo=arxiv)](https://arxiv.org/abs/2603.14659)
 [![Website](https://img.shields.io/badge/🌎_Website-VisionCoach-blue.svg)](https://visioncoach.github.io/)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97_Model-VisionCoach--7B-ffc107?color=ffc107&logoColor=white)](https://huggingface.co/danaleee/VisionCoach-7B)
 
