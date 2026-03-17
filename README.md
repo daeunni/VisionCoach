@@ -103,11 +103,14 @@ bash ./scripts/eval_all.sh
 If you use our work or our implementation in this repo, or find them helpful, please consider citing:
 
 ```bibtex
-@article{lee2025visioncoach,
-  title={VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting},
-  author={Lee, Daeun and Yu, Shoubin and Zhang, Yue and Bansal, Mohit},
-  journal={arXiv preprint arXiv:2512.01707},
-  year={2025}
+@misc{lee2026visioncoachreinforcinggroundedvideo,
+      title={VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting}, 
+      author={Daeun Lee and Shoubin Yu and Yue Zhang and Mohit Bansal},
+      year={2026},
+      eprint={2603.14659},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.14659}, 
 }
 ```
 
