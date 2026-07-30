@@ -1,6 +1,6 @@
 <div align="center">
 
-# VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting
+# [ECCV 2026] VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting 
 
 <img src="img/visioncoach_logo.png" width="280"/>
 
